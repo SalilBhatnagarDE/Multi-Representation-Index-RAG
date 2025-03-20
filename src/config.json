@@ -1,0 +1,22 @@
+{
+  "OPENAI_API_KEY": "YOUR_OPENAI_API_KEY",
+  "DOCUMENT_SOURCE": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+  "CHUNK_SIZE": 1000,
+  "CHUNK_OVERLAP": 200,
+  "EMBEDDING_MODELS": [
+    "openai",
+    "sentence_transformers"
+  ],
+  "SENTENCE_TRANSFORMERS_MODEL": "all-mpnet-base-v2",
+  "VECTOR_STORE_PATH": "./vector_store",
+  "RERANKER_MODEL": "cross-encoder/ms-marco-TinyBERT-L-2-v2",
+  "HYBRID_SEARCH": true,
+  "KEYWORD_SEARCH_WEIGHT": 0.3,
+  "METADATA_FILTERS": {
+    "source": "wikipedia"
+  },
+  "LLM_MODEL": "gpt-3.5-turbo",
+  "TEMPERATURE": 0.2,
+  "MAX_TOKENS": 500,
+  "PROMPT_TEMPLATE": "Use the following context to answer the user's question. If you don't know the answer, just say you don't know.\n\nContext:\n{context}\n\nQuestion: {question}\n\nAnswer:"
+}
